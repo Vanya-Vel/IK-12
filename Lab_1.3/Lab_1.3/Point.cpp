@@ -6,18 +6,6 @@
 
 using namespace std;
 
-// Функція для зміщення точки по осі X
-void Point::moveX(int stepX)
-{
-	x += stepX;
-}
-
-// Функція для зміщення точки по осі Y
-void Point::moveY(int stepY)
-{
-	y += stepY;
-}
-
 // Функція для обчислення відстані між двома точками
 double Point::distanceFromXtoY(const Point& other) const
 {

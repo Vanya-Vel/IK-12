@@ -15,9 +15,9 @@ public:
     int getX() const { return x; } // Геттер для x-координати
     int getY() const { return y; } // Геттер для y-координати
     double getRadius() const { return radius; } // Геттер для радіусу кола
-    void setX(int value); // Сеттер для x-координати
-    void setY(int value); // Сеттер для y-координати
-    void setRadius(double value); // Сеттер для радіусу кола
+    void setX(int value) { x = value; } // Сеттер для x-координати
+    void setY(int value) { y = value; } // Сеттер для y-координати
+    void setRadius(double value) { radius = value; } // Сеттер для радіусу кола
 
     bool Init(int x, int y, double radius); // Метод для ініціалізації координат і радіусу кола
     double AreaOfCircle() const { return M_PI * radius * radius; } // Метод для обчислення площі кола

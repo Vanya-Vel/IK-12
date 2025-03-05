@@ -2,18 +2,6 @@
 #include <iostream>
 using namespace std;
 
-// Встановлення номіналу
-void Money::SetFirst(int value)
-{
-	first = value;
-}
-
-// Встановлення кількості купюр
-void Money::SetSecond(unsigned int value)
-{
-	second = value;
-}
-
 // Перевірка коректності номіналу та кількості купюр
 bool Money::Init(int Denom, int NumOfDenom)
 {
@@ -73,10 +61,4 @@ void Money::Read()
 		cout << "second = ";
 		cin >> NumOfDenom;
 	} while (!Init(Denom, NumOfDenom));
-}
-
-// Обчислення загальної суми грошей
-int Money::Summa()
-{
-	return (first * second);
 }

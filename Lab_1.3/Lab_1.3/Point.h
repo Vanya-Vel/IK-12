@@ -18,10 +18,10 @@ public:
     void setY(int value) { y = value; }; // Встановлює координату Y
 
     // Метод для переміщення точки по осі X
-    void moveX(int stepX);
+    void moveX(int stepX) { x += stepX; }
 
     // Метод для переміщення точки по осі Y
-    void moveY(int stepY);
+    void moveY(int stepY) { y += stepY; }
 
     // Метод для обчислення відстані між двома точками
     double distanceFromXtoY(const Point& other) const;

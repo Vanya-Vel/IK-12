@@ -3,20 +3,6 @@
 
 using namespace std;
 
-void Circle::setX(int value)
-{
-    x = value; // Сеттер для координати x: присвоює значення параметра value змінній x
-}
-
-void Circle::setY(int value)
-{
-    y = value; // Сеттер для координати y: присвоює значення параметра value змінній y
-}
-
-void Circle::setRadius(double value)
-{
-    radius = value; // Сеттер для радіусу кола: присвоює значення параметра value змінній radius
-}
 
 bool Circle::Init(int x, int y, double radius)
 {
