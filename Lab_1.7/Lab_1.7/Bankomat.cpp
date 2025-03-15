@@ -5,22 +5,6 @@ using namespace std; // Додаємо простір імен std для скорочення запису
 // Конструктор за замовчуванням
 Bankomat::Bankomat() : minWithdrawalAmount(100), maxWithdrawalAmount(5000) {}
 
-// Ініціалізація банкомату
-void Bankomat::Init(string id, double minAmount, double maxAmount) {
-    atmID = id;  // Присвоєння ідентифікатора банкомату
-    minWithdrawalAmount = minAmount;  // Мінімальна сума для зняття
-    maxWithdrawalAmount = maxAmount;  // Максимальна сума для зняття
-}
-
-// Перевірка правильності ID банкомату
-bool Bankomat::validateATMID(string id) {
-    return id.length() == 1;  // Перевірка, чи довжина ID дорівнює 1 (можна змінити умови за потребою)
-}
-
-// Виведення балансу
-void Bankomat::displayBalance() {
-    atmMoney.displayBalance();  // Викликаємо метод для виведення балансу банкомату
-}
 
 // Виведення балансу в букв. форматі
 void Bankomat::displayBalanceInWords() {

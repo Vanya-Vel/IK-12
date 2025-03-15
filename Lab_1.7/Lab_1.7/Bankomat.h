@@ -17,13 +17,17 @@ public:
     Bankomat();
 
     // Ініціалізація банкомату
-    void Init(string id, double minAmount, double maxAmount);
+    void InitSet(string id, double minAmount, double maxAmount) {
+        atmID = id;  // Присвоєння ідентифікатора банкомату
+        minWithdrawalAmount = minAmount;  // Мінімальна сума для зняття
+        maxWithdrawalAmount = maxAmount;  // Максимальна сума для зняття
+    }
 
     // Перевірка правильності ID банкомату
-    bool validateATMID(string id);
+    bool validateATMID(string id) { return id.length() == 1; }
 
     // Виведення балансу
-    void displayBalance();
+    void displayBalance() { atmMoney.displayBalance(); }
 
     // Виведення балансу в букв. форматі
     void displayBalanceInWords();

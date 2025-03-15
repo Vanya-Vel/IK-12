@@ -18,7 +18,7 @@ int main() {
     cin >> atmID;
 
     // Ініціалізація банкомату
-    atm.Init(atmID, minAmount, maxAmount);
+    atm.InitSet(atmID, minAmount, maxAmount);
 
     if (!atm.validateATMID(atmID)) {
         std::cout << "Невірний ідентифікаційний номер банкомату! Повинно бути 29 цифр.\n";

@@ -10,7 +10,7 @@
 using namespace std;
 
 // Функція для створення об'єкта Money з перевіркою коректності введених значень
-Money makeNumber2(int x, int y)
+Money makeMoney(int x, int y)
 {
     Money nn;
     if (!nn.Init(x, y)) // Викликаємо Init для ініціалізації об'єкта
@@ -22,9 +22,9 @@ Money makeNumber2(int x, int y)
 
 int main()
 {
-    Money k;
-    k.Read(); // Зчитуємо значення від користувача
-    k.Display(); // Виводимо поточні значення об'єкта
+    Money k;        // Створюємо об'єкт класу Money
+    k.Read();       // Зчитуємо значення від користувача
+    k.Display();    // Виводимо поточні значення об'єкта
     cout << "Summa " << k.Summa() << endl << endl;
 
     Money i;
@@ -33,7 +33,7 @@ int main()
     cin >> den; // Введення номіналу
     cout << "second = ? ";
     cin >> num; // Введення кількості номіналів
-    i = makeNumber2(den, num); // Створюємо об'єкт через функцію makeNumber2()
+    i = makeMoney(den, num); // Створюємо об'єкт через функцію makeMoney()
     i.Display(); // Виводимо значення об'єкта
     cout << "Summa " << i.Summa() << endl << endl;
     return 0;
