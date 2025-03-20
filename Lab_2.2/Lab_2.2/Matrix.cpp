@@ -23,7 +23,7 @@ Matrix::Matrix(int n)
 
 		if (n == 0)
 		{
-			cout << "0x0 matrix is not a valid value, return" << endl;
+			cout << "0x0 matrix is not a valid value" << endl;
 		}
 
 		if (n > 0)

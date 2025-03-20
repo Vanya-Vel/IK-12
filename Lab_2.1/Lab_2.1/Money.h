@@ -19,8 +19,8 @@ public:
 
     void SetFirst(unsigned int);             // Встановити номінал
     void SetSecond(unsigned int);            // Встановити кількість купюр
-    unsigned int GetFirst() const;           // Отримати номінал
-    unsigned int GetSecond() const;          // Отримати кількість купюр
+    unsigned int GetFirst() const { return first; }          // Отримати номінал
+    unsigned int GetSecond() const { return second; }          // Отримати кількість купюр
 
     Money& operator = (const Money&);        // присвоєння
     operator string() const;                 // приведення до рядка

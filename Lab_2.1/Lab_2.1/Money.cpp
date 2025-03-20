@@ -73,16 +73,6 @@ void Money::SetSecond(unsigned int NumOfDenom)		// Метод для встановлення кілько
 	second = (NumOfDenom != 0) ? NumOfDenom : 0;	// якщо кількість купюр більше за 0, встановлюємо значення
 }
 
-unsigned int Money::GetFirst() const				// Геттер для номіналу
-{
-	return first;
-}
-		
-unsigned int Money::GetSecond() const				// Геттер для кількості купюр
-{
-	return second;
-}
-
 Money& Money::operator = (const Money& d)			// Оператор присвоєння
 {
 	if (this != &d) {		// Перевірка на самоприсвоєння

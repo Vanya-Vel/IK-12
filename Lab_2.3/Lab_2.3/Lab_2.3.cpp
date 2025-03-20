@@ -1,4 +1,10 @@
-﻿#include <iostream>
+﻿// Lab_02_3.cpp
+// < Величко Іван >
+// Лабораторна робота № 2.3
+// Конструктори та перевантаження операцій для класів 
+// Варіант 0.4
+
+#include <iostream>
 #include <windows.h>
 #include "Point.h"
 
