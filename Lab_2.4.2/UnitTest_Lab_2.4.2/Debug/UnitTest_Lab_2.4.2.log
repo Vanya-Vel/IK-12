@@ -1,0 +1,4 @@
+﻿  UnitTest_Lab_2.4.2.cpp
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_2.4.2\Lab_2.4.2\Money.cpp(63,51): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_2.4.2\Lab_2.4.2\Money.cpp(66,49): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+  UnitTest_Lab_2.4.2.vcxproj -> E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_2.4.2\Debug\UnitTest_Lab_2.4.2.dll

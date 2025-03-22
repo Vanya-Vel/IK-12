@@ -15,7 +15,7 @@ public:
     Money();                                 // конструктор без аргументів
     Money(unsigned int, unsigned int);       // конструктор ініціалізації
     Money(const Money&);                     // конструктор копіювання
-    ~Money();
+    ~Money();                                // декструтор
 
     void SetFirst(unsigned int);             // Встановити номінал
     void SetSecond(unsigned int);            // Встановити кількість купюр
