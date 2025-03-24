@@ -1,4 +1,10 @@
-﻿#include "Rectangle.h"
+﻿// Lab_02_5.cpp
+// < Величко Іван >
+// Лабораторна робота № 2.5
+// Конструктори та перевантаження операцій для класів з композицією 
+// Варіант 0.4
+
+#include "Rectangle.h"
 #include "Pair.h"
 #include <iostream>
 using namespace std;

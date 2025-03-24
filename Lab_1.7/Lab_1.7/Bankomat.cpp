@@ -1,15 +1,31 @@
 #include "Bankomat.h"
 
-using namespace std; // Додаємо простір імен std для скорочення запису
+using namespace std;
 
 // Конструктор за замовчуванням
 Bankomat::Bankomat() : minWithdrawalAmount(100), maxWithdrawalAmount(5000) {}
 
+// Ініціалізація банкомату
+void Bankomat::Init(string id, double minAmount, double maxAmount) {
+    atmID = id;  // Присвоєння ідентифікатора банкомату
+    minWithdrawalAmount = minAmount;  // Мінімальна сума для зняття
+    maxWithdrawalAmount = maxAmount;  // Максимальна сума для зняття
+}
+
+// Перевірка правильності ID банкомату
+bool Bankomat::validateATMID(string id) {
+    return id.length() == 26;  // Перевірка довжини ID
+}
+
+// Виведення балансу
+void Bankomat::displayBalance() {
+    atmMoney.displayBalance();  // Викликаємо метод для виведення балансу банкомату
+}
 
 // Виведення балансу в букв. форматі
 void Bankomat::displayBalanceInWords() {
     double totalAmount = atmMoney.getTotalAmount();  // Отримуємо загальну суму
-    cout << "Баланс в букв. форматі: " << atmMoney.numberToWords(totalAmount) << endl;  // Виведення балансу словами
+    cout << "Баланс в букв. форматі: " << atmMoney.numberToWords(totalAmount) << endl;
 }
 
 // Зняття грошей
@@ -24,12 +40,12 @@ bool Bankomat::withdrawMoney(double amount) {
             return true;
         }
         else {
-            cout << "Недостатньо грошей у банкоматі для цієї суми.\n";  // Якщо грошей недостатньо
+            cout << "Недостатньо грошей у банкоматі для цієї суми.\n";
             return false;
         }
     }
     else {
-        cout << "Сума повинна бути між " << minWithdrawalAmount << " і " << maxWithdrawalAmount << " грн.\n";  // Якщо сума не в межах лімітів
+        cout << "Сума повинна бути між " << minWithdrawalAmount << " і " << maxWithdrawalAmount << " грн.\n";
         return false;
     }
 }
@@ -37,12 +53,12 @@ bool Bankomat::withdrawMoney(double amount) {
 // Внесення грошей
 bool Bankomat::depositMoney(double amount) {
     atmMoney.addMoney(amount);  // Додаємо гроші до банкомату
-    cout << "Внесено " << amount << " грн.\n";  // Повідомлення про внесену суму
+    cout << "Внесено " << amount << " грн.\n";
     return true;
 }
 
 // Показ лімітів зняття
 void Bankomat::showLimits() {
-    cout << "Максимальна сума зняття: " << maxWithdrawalAmount << " грн\n";  // Виведення максимального ліміту зняття
-    cout << "Мінімальна сума зняття: " << minWithdrawalAmount << " грн\n";  // Виведення мінімального ліміту зняття
+    cout << "Максимальна сума зняття: " << maxWithdrawalAmount << " грн\n";
+    cout << "Мінімальна сума зняття: " << minWithdrawalAmount << " грн\n";
 }

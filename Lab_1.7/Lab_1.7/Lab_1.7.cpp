@@ -18,7 +18,7 @@ int main() {
     cin >> atmID;
 
     // Ініціалізація банкомату
-    atm.InitSet(atmID, minAmount, maxAmount);
+    atm.Init(atmID, minAmount, maxAmount);
 
     if (!atm.validateATMID(atmID)) {
         std::cout << "Невірний ідентифікаційний номер банкомату! Повинно бути 29 цифр.\n";
@@ -60,7 +60,7 @@ int main() {
             }
             break;
         }
-        case 3: {  // Внесення грошей
+        case 3: {
             double amount;
             cout << "Введіть суму для внесення: ";
             cin >> amount;
@@ -72,11 +72,11 @@ int main() {
             atm.showLimits();
             break;
         }
-        case 0: {  // Вихід
+        case 0: {
             std::cout << "Вихід з програми.\n";
             break;
         }
-        default: {  // Некоректний вибір
+        default: {
             std::cout << "Невірний вибір, спробуйте ще раз.\n";
             break;
         }

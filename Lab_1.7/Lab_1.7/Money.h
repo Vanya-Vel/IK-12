@@ -12,11 +12,7 @@ private:
 
 public:
     // Конструктор за замовчуванням
-    Money() {
-        // Ініціалізація всіх номіналів грошей в 0
-        fiveHundred = twoHundred = hundred = fifty = twenty = ten = five = two = one = 0;
-        fiftyKop = twentyFiveKop = tenKop = fiveKop = twoKop = oneKop = 0;
-    }
+    Money();
 
     // Ініціалізація грошей (вказуємо конкретну кількість монет та купюр)
     void initMoney(int fh, int th, int h, int f, int t, int tn, int fi, int tw, int o, int fifty, int twentyFive, int ten, int five, int two, int one);

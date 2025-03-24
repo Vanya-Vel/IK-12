@@ -3,7 +3,7 @@
 #include <string>
 #include "Money.h"
 
-using namespace std; // Додаємо простір імен std для скорочення запису
+using namespace std;
 
 class Bankomat {
 private:
@@ -17,17 +17,13 @@ public:
     Bankomat();
 
     // Ініціалізація банкомату
-    void InitSet(string id, double minAmount, double maxAmount) {
-        atmID = id;  // Присвоєння ідентифікатора банкомату
-        minWithdrawalAmount = minAmount;  // Мінімальна сума для зняття
-        maxWithdrawalAmount = maxAmount;  // Максимальна сума для зняття
-    }
+    void Init(string id, double minAmount, double maxAmount);
 
     // Перевірка правильності ID банкомату
-    bool validateATMID(string id) { return id.length() == 1; }
+    bool validateATMID(string id);
 
     // Виведення балансу
-    void displayBalance() { atmMoney.displayBalance(); }
+    void displayBalance();
 
     // Виведення балансу в букв. форматі
     void displayBalanceInWords();
