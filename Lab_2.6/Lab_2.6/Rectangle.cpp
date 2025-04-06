@@ -25,18 +25,6 @@ Rectangle::Pair::~Pair(void) {
     counter--;  // «меншуЇмо л≥чильник
 }
 
-int Rectangle::Pair::getCounter() {
-    return counter;
-}
-
-int Rectangle::Pair::getFirst() const { return first; }
-void Rectangle::Pair::setFirst(int first) { this->first = first; }
-
-int Rectangle::Pair::getSecond() const { return second; }
-void Rectangle::Pair::setSecond(int second) { this->second = second; }
-
-int Rectangle::Pair::multiply() const { return first * second; }
-
 istream& operator>>(istream& in, Rectangle::Pair& p) {
     cout << "Enter first value: ";
     in >> p.first;
@@ -97,20 +85,6 @@ Rectangle::Rectangle(const Rectangle& r) : sides(r.sides) {
 Rectangle::~Rectangle(void) {
     counter--;  // «меншуЇмо л≥чильник
 }
-
-int Rectangle::getCounter() {
-    return counter;
-}
-
-Rectangle::Pair Rectangle::getPair() const { return sides; }
-
-void Rectangle::setPair(const Pair& sides) { this->sides = sides; }
-
-int Rectangle::getPerimeter() const {
-    return 2 * (sides.getFirst() + sides.getSecond());
-}
-
-int Rectangle::getArea() const { return sides.multiply(); }
 
 Rectangle& Rectangle::operator=(const Rectangle& r) {
     if (this != &r) {

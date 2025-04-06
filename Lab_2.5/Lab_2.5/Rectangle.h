@@ -13,14 +13,16 @@ public:
     Rectangle(const Rectangle& r);  // Конструктор копіювання
 
     // Методи доступу
-    Pair getPair() const;
-    void setPair(const Pair& sides);
+    Pair getPair() const { return sides; }
+    void setPair(const Pair& sides) { this->sides = sides; }
 
     // Обчислення периметра
-    int getPerimeter() const;
+    int getPerimeter() const {
+        return 2 * (sides.getFirst() + sides.getSecond());
+    }
 
     // Обчислення площі
-    int getArea() const;
+    int getArea() const { return sides.multiply(); }
 
     // Операція присвоєння
     Rectangle& operator=(const Rectangle& r);

@@ -6,14 +6,6 @@ Pair::Pair(int first, int second) : first(first), second(second) {}
 
 Pair::Pair(const Pair& p) : first(p.first), second(p.second) {}
 
-int Pair::getFirst() const { return first; }
-void Pair::setFirst(int first) { this->first = first; }
-
-int Pair::getSecond() const { return second; }
-void Pair::setSecond(int second) { this->second = second; }
-
-int Pair::multiply() const { return first * second; }
-
 istream& operator>>(istream& in, Pair& p) {
     cout << "Enter first value: ";
     in >> p.first;

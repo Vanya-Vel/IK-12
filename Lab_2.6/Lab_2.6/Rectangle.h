@@ -16,16 +16,18 @@ public:
         Pair(const Pair& p);  // Конструктор копіювання
         ~Pair(void);  // Деструктор
 
-        static int getCounter();  // Метод для отримання кількості об'єктів Pair
+        static int getCounter() {
+            return counter;
+        }  // Метод для отримання кількості об'єктів Pair
 
         // Операції доступу
-        int getFirst() const;
-        void setFirst(int first);
-        int getSecond() const;
-        void setSecond(int second);
+        int getFirst() const { return first; }
+        void setFirst(int first) { this->first = first; }
+        int getSecond() const { return second; }
+        void setSecond(int second) { this->second = second; }
 
         // Метод для обчислення добутку
-        int multiply() const;
+        int multiply() const { return first * second; }
 
         // Введення та виведення
         friend istream& operator>>(istream& in, Pair& p);
@@ -51,15 +53,19 @@ public:
     Rectangle(const Rectangle& r);  // Конструктор копіювання
     ~Rectangle(void);  // Деструктор
 
-    static int getCounter();  // Метод для отримання кількості об'єктів Rectangle
+    static int getCounter() {
+        return counter;
+    }// Метод для отримання кількості об'єктів Rectangle
 
     // Методи доступу
-    Pair getPair() const;
-    void setPair(const Pair& sides);
+    Pair getPair() const { return sides; }
+    void setPair(const Pair& sides) { this->sides = sides; }
 
     // Обчислення периметра та площі
-    int getPerimeter() const;
-    int getArea() const;
+    int getPerimeter() const {
+        return 2 * (sides.getFirst() + sides.getSecond());
+    }
+    int getArea() const { return sides.multiply(); }
 
     // Операція присвоєння
     Rectangle& operator=(const Rectangle& r);

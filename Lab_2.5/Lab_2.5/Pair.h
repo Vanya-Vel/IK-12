@@ -13,13 +13,13 @@ public:
     Pair(const Pair& p);  // Конструктор копіювання
 
     // Операції доступу
-    int getFirst() const;
-    void setFirst(int first);
-    int getSecond() const;
-    void setSecond(int second);
+    int getFirst() const { return first; }
+    void setFirst(int first) { this->first = first; }
+    int getSecond() const { return second; }
+    void setSecond(int second) { this->second = second; }
 
     // Метод для обчислення добутку
-    int multiply() const;
+    int multiply() const { return first * second; }
 
     // Виведення значень
     friend istream& operator>>(istream& in, Pair& p);

@@ -10,16 +10,6 @@ Rectangle::Rectangle(const Pair& sides) : sides(sides) {}
 
 Rectangle::Rectangle(const Rectangle& r) : sides(r.sides) {}
 
-Pair Rectangle::getPair() const { return sides; }
-
-void Rectangle::setPair(const Pair& sides) { this->sides = sides; }
-
-int Rectangle::getPerimeter() const {
-    return 2 * (sides.getFirst() + sides.getSecond());
-}
-
-int Rectangle::getArea() const { return sides.multiply(); }
-
 Rectangle& Rectangle::operator=(const Rectangle& r) {
     if (this != &r) {
         sides = r.sides;

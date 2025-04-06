@@ -1,0 +1,49 @@
+#pragma once
+#include "Pair.h"
+#include <iostream>
+using namespace std;
+
+class Rectangle : public Pair
+{
+
+public:
+    Rectangle();  // Конструктор без аргументів
+    Rectangle(const Pair& sides);  // Конструктор з параметрами
+    Rectangle(const Rectangle& r);  // Конструктор копіювання
+
+    // Методи доступу
+    Pair getPair() const {
+        return Pair(getFirst(), getSecond());
+    }
+
+    void setPair(const Pair& sides) {
+        setFirst(sides.getFirst());
+        setSecond(sides.getSecond());
+    }
+
+    // Обчислення периметра
+    int getPerimeter() const {
+        return 2 * (getFirst() + getSecond());
+    }
+
+    // Обчислення площі
+    int getArea() const { return multiply(); }
+
+    // Операція присвоєння
+    Rectangle& operator=(const Rectangle& r);
+
+    // Операції інкременту і декременту
+    Rectangle& operator++();  // Префікс
+    Rectangle operator++(int);  // Постфікс
+    Rectangle& operator--();  // Префікс
+    Rectangle operator--(int);  // Постфікс
+
+    // Виведення значень
+    friend ostream& operator<<(ostream& out, const Rectangle& r);
+
+    // Введення значень
+    friend istream& operator>>(istream& in, Rectangle& r);
+
+    // Перетворення в буквеному форматі
+    string toString() const;
+};
