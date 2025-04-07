@@ -11,9 +11,6 @@ public:
     // Метод для переміщення точки по осі Y
     void moveY(int stepY) { y += stepY; }
 
-    int getX() const { return x; }
-    int getY() const { return y; }
-
     // Метод для обчислення відстані між двома точками
     double distanceFromXtoY(const Functions& other) const;
 

@@ -1,0 +1,14 @@
+﻿  Bankomat.cpp
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_3.3G\Lab_3.3G\Bankomat.h(6,25): warning C4584: 'Bankomat': base-class 'Object' is already a base-class of 'Money'
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_3.3G\Lab_3.3G\Object.h(3): message : see declaration of 'Object'
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_3.3G\Lab_3.3G\Money.h(8): message : see declaration of 'Money'
+  Functions.cpp
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_3.3G\Lab_3.3G\Bankomat.h(6,25): warning C4584: 'Bankomat': base-class 'Object' is already a base-class of 'Money'
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_3.3G\Lab_3.3G\Object.h(3): message : see declaration of 'Object'
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_3.3G\Lab_3.3G\Money.h(8): message : see declaration of 'Money'
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_3.3G\Lab_3.3G\Functions.h(7,26): warning C4584: 'Functions': base-class 'Object' is already a base-class of 'Bankomat'
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_3.3G\Lab_3.3G\Object.h(3): message : see declaration of 'Object'
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_3.3G\Lab_3.3G\Bankomat.h(6): message : see declaration of 'Bankomat'
+  Money.cpp
+  Generating Code...
+  Lab_3.3G.vcxproj -> E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_3.3G\Debug\Lab_3.3G.exe
