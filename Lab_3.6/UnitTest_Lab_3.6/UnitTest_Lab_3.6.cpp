@@ -29,6 +29,6 @@ namespace UnitTestLab36
             // Шукаємо підрядок "B1::b1 = 777" в строковому потоці
             Assert::IsTrue(output.str().find("B1::b1 = 777") != std::string::npos);
         }
-        ''
+        
 	};
 }
