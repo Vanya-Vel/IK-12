@@ -8,29 +8,106 @@
 #include "Money.h"
 #include <windows.h>
 #include <sstream>
+#include <stdexcept>
 
 using namespace std;
 
+// Стандартний виняток
+void testStandardException(int x) throw(std::invalid_argument) {
+    if (x < 0) {
+        throw std::invalid_argument("Значення не може бути від'ємним!");
+    }
+    cout << "Значення коректне: " << x << endl;
+}
+
+// Виняток-нащадок від стандартного
+class CustomInvalidArgument : public std::invalid_argument {
+public:
+    explicit CustomInvalidArgument(const std::string& message)
+        : std::invalid_argument(message) {}
+};
+
+void testCustomException(int x) throw(CustomInvalidArgument) {
+    if (x < 0) {
+        throw CustomInvalidArgument("Негативне значення!");
+    }
+    cout << "Значення коректне: " << x << endl;
+}
+
+// Власний виняток
+class MyException {
+public:
+    std::string message;
+    explicit MyException(const std::string& msg) : message(msg) {}
+};
+
+void testMyException(int x) throw(MyException) {
+    if (x < 0) {
+        throw MyException("Негативне значення!");
+    }
+    cout << "Значення коректне: " << x << endl;
+}
+
+// Обробка винятку std::bad_exception
+void testBadException() throw() {
+    throw std::bad_exception();
+}
+
 // Функція для створення об'єкта Money з перевіркою коректності введених значень
-Money makeMoney(int x, int y)
-{
+Money makeMoney(int x, int y) throw(std::invalid_argument) {
     int validDenoms[9] = { 1, 2, 5, 10, 20, 50, 100, 200, 500 };
 
     // Перевірка на правильний номінал
+    bool isValid = false;
     for (int denom : validDenoms) {
         if (x == denom && y > 0) {
-            return Money(x, y);  // Якщо номінал правильний і кількість більше 0, повертаємо об'єкт Money
+            isValid = true;
+            break;
         }
     }
 
-    // Якщо помилка: або неправильний номінал, або кількість купюр менша або рівна 0
-    cout << "Неправильний номінал або кількість купюр має бути більшою за 0!" << endl;
-    return Money();  // Повертаємо об'єкт з 0-значеннями
+    if (!isValid) {
+        throw std::invalid_argument("Неправильний номінал або кількість купюр має бути більшою за 0!");
+    }
+
+    return Money(x, y);
 }
 
 int main() {
     // Встановлення кодування для кирилиці у Windows
     SetConsoleOutputCP(1251);
+
+    // Тестування стандартного винятку
+    try {
+        testStandardException(-1);
+    }
+    catch (const std::invalid_argument& e) {
+        cout << "Обробка стандартного винятку: " << e.what() << endl;
+    }
+
+    // Тестування винятку-нащадка
+    try {
+        testCustomException(-5);
+    }
+    catch (const CustomInvalidArgument& e) {
+        cout << "Обробка винятку-нащадка: " << e.what() << endl;
+    }
+
+    // Тестування власного винятку
+    try {
+        testMyException(-10);
+    }
+    catch (const MyException& e) {
+        cout << "Обробка власного винятку: " << e.message << endl;
+    }
+
+    // Тестування стандартного винятку bad_exception
+    try {
+        testBadException();
+    }
+    catch (const std::bad_exception& e) {
+        cout << "Обробка винятку bad_exception: " << e.what() << endl;
+    }
 
     // Тестування конструктора за замовчуванням
     Money money1;
@@ -77,11 +154,13 @@ int main() {
             cout << "Кількість купюр: ";
             cin >> count;
 
-            Money money = makeMoney(denom, count);  // Виклик функції для створення об'єкта Money
-
-            if (money.GetFirst() != 0 && money.GetSecond() != 0) {  // Перевірка на коректність
+            try {
+                Money money = makeMoney(denom, count);  // Виклик функції для створення об'єкта Money
                 cout << "Об'єкт Money створено: " << money << endl;
                 break;  // Вихід з циклу при успішному створенні
+            }
+            catch (const std::invalid_argument& e) {
+                cout << "Помилка: " << e.what() << endl;
             }
         }
     }
