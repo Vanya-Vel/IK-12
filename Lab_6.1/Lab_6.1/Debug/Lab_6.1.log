@@ -1,0 +1,16 @@
+﻿  Array.cpp
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_6.1\Lab_6.1\Array.h(26,10): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_6.1\Lab_6.1\Array.h(27,10): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_6.1\Lab_6.1\Array.h(28,10): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_6.1\Lab_6.1\Array.h(29,10): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_6.1\Lab_6.1\Array.h(44,51): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_6.1\Lab_6.1\Array.h(47,55): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_6.1\Lab_6.1\Array.h(48,67): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_6.1\Lab_6.1\Array.cpp(9,74): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_6.1\Lab_6.1\Array.cpp(19,90): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_6.1\Lab_6.1\Array.cpp(33,92): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_6.1\Lab_6.1\Array.cpp(47,45): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_6.1\Lab_6.1\Array.cpp(87,71): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_6.1\Lab_6.1\Array.cpp(96,83): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_6.1\Lab_6.1\Array.cpp(105,54): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+  Lab_6.1.vcxproj -> E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_6.1\Debug\Lab_6.1.exe

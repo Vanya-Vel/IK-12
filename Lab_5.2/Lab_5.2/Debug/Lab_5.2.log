@@ -1,0 +1,8 @@
+﻿  Lab_5.2.cpp
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_5.2\Lab_5.2\Lab_5.2.cpp(51,1): warning C4297: 'convertToSeconds2': function assumed not to throw an exception but does
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_5.2\Lab_5.2\Lab_5.2.cpp(51,1): message : __declspec(nothrow), throw(), noexcept(true), or noexcept was specified on the function
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_5.2\Lab_5.2\Lab_5.2.cpp(56,74): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_5.2\Lab_5.2\Lab_5.2.cpp(63,69): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_5.2\Lab_5.2\Lab_5.2.cpp(70,75): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_5.2\Lab_5.2\Lab_5.2.cpp(77,71): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+  Lab_5.2.vcxproj -> E:\NULP\2 Semester\OOP\Student\ІК-12\Lab_5.2\Debug\Lab_5.2.exe
