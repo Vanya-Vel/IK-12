@@ -1,7 +1,7 @@
 ﻿// Lab_05_2.cpp
 // < Величко Іван >
 // Лабораторна робота № 5.2
-// Класи з опрацюванням виняткових ситуацій
+// Функції, що генерують виняткові ситуації
 // Варіант 0.4
 
 
@@ -21,7 +21,7 @@ class MyIndependentException {
 public:
     int hours, minutes;
     MyIndependentException(int h, int m) : hours(h), minutes(m) {}
-};
+};  
 
 std::string to_string(int value) {
     char buffer[32] = { 0 };

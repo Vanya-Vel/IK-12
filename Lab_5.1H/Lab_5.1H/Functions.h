@@ -9,8 +9,6 @@ public:
     // Перевантаження оператора виводу для банкомату
     friend ostream& operator<<(ostream& os, const Functions& functions);
 
-    // Перевантаження оператора вводу для банкомату
-    friend istream& operator>>(istream& is, Functions& functions);
 
     Functions() : Bankomat() {}
     Functions(string id, double minAmount, double maxAmount) : Bankomat(id, minAmount, maxAmount) {}
